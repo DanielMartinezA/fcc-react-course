@@ -1,6 +1,8 @@
 :root {
   --background-header: #FFFFFF;
   --background-main: #FFFFFF;
+  --text-black: #222222;
+  --text-gray: #918E9B;
 }
 
 * {
@@ -19,6 +21,14 @@ html, body {
   flex-direction: column;
   justify-content: flex-start;
   min-height: 100vh;
+}
+
+.textGray {
+  color: var(--text-gray);
+}
+
+.boldText {
+  font-weight: 600;
 }
 
 .navbar {
@@ -48,13 +58,55 @@ section {
 }
 
 .hero > .header {
+  margin-top: 16px;
   font-weight: 600;
   font-size: 36px;
   line-height: 110%;
 }
 
 .hero > .text {
+  margin-top: 0;
   font-weight: 300;
   font-size: 16px;
+  line-height: 110%;
+}
+
+.card {
+  width: 175px;
+}
+
+.card .cardImage {
+  width: 100%;
+  border-radius: 9px;
+}
+
+.card .cardRating {
+  display: flex;
+  align-items: center;
+}
+
+.card .cardStars {
+  height: 14px;
+}
+
+.card .cardInfo {
+  color: var(--text-black);
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 110%;
+}
+
+.card .cardTitle {
+  margin-top: 0;
+  color: var(--text-black);
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 110%;
+}
+
+.card .cardPricing {
+  color: var(--text-black);
+  font-weight: 300;
+  font-size: 12px;
   line-height: 110%;
 }

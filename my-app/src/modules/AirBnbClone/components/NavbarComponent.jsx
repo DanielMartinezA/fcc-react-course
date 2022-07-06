@@ -1,5 +1,5 @@
 import styles from '../AirBnbCloneApp.module.css';
-import logo from '../assets/airbnb-logo.png'
+import logo from '../assets/airbnb-logo.png';
 
 export default function NavbarComponent() {
   return (

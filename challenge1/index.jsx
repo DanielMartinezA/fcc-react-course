@@ -1,20 +1,3 @@
-import HeaderComponent from "./HeaderComponent"
-
-/*s
-Challenge: Starting from scratch, build and render the 
-HTML for our section project. Check the Google slide for 
-what you're trying to build.
-
-We'll be adding styling to it later.
-
-Hints:
-* The React logo is a file in the project tree, so you can
-  access it by using `src="./react-logo.png" in your image
-  element
-* You can also set the `width` attribute of the image element
-  just like in HTML. In the slide, I have it set to 40px
-*/
-
 function TestComponent() {
   return (
     <div>
@@ -31,26 +14,26 @@ function TestComponent() {
   )
 }
 
-// function HeaderComponent() {
-//   return (
-//     <header className="header">
-//       <nav className="navbar">
-//         <img className="logo" src="./react-logo.png" alt="React logo" />
-//         <ul className="nav-items">
-//           <li>
-//             Pricing
-//           </li>
-//           <li>
-//             About
-//           </li>
-//           <li>
-//             Contact
-//           </li>
-//         </ul>
-//       </nav>
-//     </header>
-//   )
-// }
+function HeaderComponent() {
+  return (
+    <header className="header">
+      <nav className="navbar">
+        <img className="logo" src="./react-logo.png" alt="React logo" />
+        <ul className="nav-items">
+          <li>
+            Pricing
+          </li>
+          <li>
+            About
+          </li>
+          <li>
+            Contact
+          </li>
+        </ul>
+      </nav>
+    </header>
+  )
+}
 
 function FooterComponent() {
   return (

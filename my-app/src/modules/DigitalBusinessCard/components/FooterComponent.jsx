@@ -1,5 +1,5 @@
 import styles from '../DigitalBusinessCardApp.module.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitterSquare, faFacebookSquare, faInstagramSquare, faGithubSquare} from '@fortawesome/free-brands-svg-icons'
 
 export default function FooterComponent() {

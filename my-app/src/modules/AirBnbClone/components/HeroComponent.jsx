@@ -1,5 +1,5 @@
 import styles from '../AirBnbCloneApp.module.css';
-import photoGrid from '../assets/photo-grid.png'
+import photoGrid from '../assets/photo-grid.png';
 
 export default function NavbarComponent() {
   return (
