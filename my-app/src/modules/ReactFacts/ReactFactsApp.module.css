@@ -1,0 +1,95 @@
+:root {
+  --background-header: #21222A;
+  --background-main: #282D35;
+  --background-logo: #33373E;
+  --react-blue: #61DAFB;
+  --react-white: #DEEBF8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.flexWrapper {
+  background: var(--background-main);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 100vh;
+}
+
+.navbar {
+  background: var(--background-header);
+  padding: 0px 10px;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 35px;
+}
+
+.navbar > h3 {
+  margin-left: 10px;
+  margin-right: auto;
+  color: var(--react-blue);
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.navbar > h4 {
+  margin-right: 10px;
+  color: var(--react-white);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.mainContent {
+  background: var(--background-main);
+  padding: 10px;
+  /* The example uses a half-logo as a background image */
+  /* background-image: url(./assets/background-logo.png);
+  background-repeat: no-repeat;
+  background-position: 130% center; */
+}
+
+.mainContent > h1 {
+  color: white;
+  font-size: 39px;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+}
+
+.mainContent > ul > li{
+  /* color: var(--react-blue); */
+  padding: 10px 0;
+}
+
+.mainContent > ul > li::marker{
+  color: var(--react-blue);
+  font-size: 1.4rem;
+}
+
+.mainContent > ul > li > span {
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.grayFilter {
+  filter: brightness(0) saturate(100%) invert(15%) sepia(15%) saturate(600%)
+          hue-rotate(180deg) brightness(94%) contrast(81%);
+}
+
+.backgroundImage {
+  position: absolute;
+  width: 263px;
+  height: auto;
+  margin-top: -250px;
+  margin-left: 500px;
+}

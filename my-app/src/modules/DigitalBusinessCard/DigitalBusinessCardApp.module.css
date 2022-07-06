@@ -1,0 +1,151 @@
+:root {
+  --background-main: #1A1B21;
+  --background-footer: #161619;
+  --orange-text: #F3BF99;
+  --button-blue: #5093E2;
+  --button-border: #D1D5DB;
+  --button-text-black: #374151;
+  --button-email-black: #1E1F26;
+}
+
+html, body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+}
+
+.flexWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 100vh;
+  width: 317px;
+}
+
+.info {
+  background: var(--background-main);
+  padding-bottom: 33px;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.info .photo {
+  height: auto;
+  width: 317px;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.info > .name {
+  color: white;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.info > .title {
+  color: var(--orange-text);
+  font-weight: 400;
+  font-size: 12.8px;
+  line-height: 15px;
+  text-align: center;
+  margin-top: 6.2px;
+  margin-bottom: 0;
+}
+
+.info > .address {
+  color: white;
+  font-weight: 400;
+  font-size: 10.24px;
+  line-height: 150%;
+  text-align: center;
+  margin-top: 8.8px;
+  margin-bottom: 0;
+}
+
+.info > .buttons {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 15px;
+}
+
+.info .emailButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 9px 13px 9px 11px;
+  gap: 8px;
+  background: white;
+  /* gray/300 */
+  border: 1px solid var(--button-border);
+  /* shadow/sm */
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+}
+
+.info .emailButton span {
+  color: var(--button-text-black);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.info .linkedinButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 9px 13px 9px 11px;
+  gap: 8px;
+
+  background: var(--button-blue);
+
+  /* shadow/sm */
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+  border: none;
+}
+
+.info .linkedinButton span {
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.aboutAndInterests {
+  background: var(--background-main);
+  margin-top: 0;
+  padding-left: 36px;
+  padding-right: 36px;
+}
+
+.aboutAndInterests > h2 {
+  color: #F5F5F5;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.aboutAndInterests > p {
+  color: #DCDCDC;
+  font-weight: 400;
+  font-size: 10.24px;
+  line-height: 150%;
+  margin-top: 5px;
+  padding-bottom: 15px;
+}
+
+.footer {
+  background: var(--background-footer);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.footer .socialsLink {
+  padding: 19px 0px;
+}

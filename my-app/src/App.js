@@ -1,16 +1,13 @@
-import './App.css';
-import HeaderComponent from './components/HeaderComponent'
-import MainComponent from './components/MainComponent'
-import FooterComponent from './components/FooterComponent'
+import ReactFactsApp from './modules/ReactFacts/ReactFactsApp'
+import DigitalBusinessCardApp from './modules/DigitalBusinessCard/DigitalBusinessCardApp'
+import AirBnbCloneApp from './modules/AirBnbClone/AirBnbCloneApp'
 
-function App() {
+export default function App() {
   return (
-    <div className="flex-wrapper">
-      <HeaderComponent />
-      <MainComponent />
-      <FooterComponent />
+    <div>
+      {/* <ReactFactsApp /> */}
+      {/* <DigitalBusinessCardApp /> */}
+      <AirBnbCloneApp />
     </div>
   );
 }
-
-export default App;
