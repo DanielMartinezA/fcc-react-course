@@ -1,0 +1,108 @@
+:root {
+  --background-main: #1A1B21;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+  background-color: whitesmoke;
+}
+
+.flexWrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.contactCard {
+  flex-basis: 225px;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 13px;
+  padding-bottom: 20px;
+  background-color: white;
+}
+
+.contactCard .photo {
+  width: 100%;
+  height: auto;
+  align-self: center;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.contactCard > h3 {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.infoGroup {
+  display: flex;
+  align-items: center;
+}
+
+.infoGroup .icon {
+  height: 11px;
+  margin-right: 8px;
+}
+
+.infoGroup > p {
+  margin-block: 3px;
+  font-size: 12px;
+  color: #2B283A;
+}
+
+.perspectiveContainer {
+  flex-basis: 225px;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  margin: 2em;
+  transform-style: preserve-3d;
+}
+
+.jokeCard {
+  height: 230px;
+  width: 230px;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 13px;
+  padding-bottom: 20px;
+  background-color: white;
+  -webkit-transform-origin-x: 0px; /* rotates from the bottom of the image */
+}
+
+.flipAnimation {
+  animation-duration: 1s;
+  animation-name: flipAnimation;
+  animation-timing-function: linear;
+}
+
+@keyframes flipAnimation {
+  from {
+    transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+  }
+
+  50% {
+    transform: rotateY(-90deg);
+    -webkit-transform: rotateY(-90deg);
+  }
+
+  to {
+    transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+  }
+}
+
+
+.jokeSetup {
+
+}
