@@ -8,8 +8,8 @@ export default function App() {
     <div>
       {/* <ReactFactsApp /> */}
       {/* <DigitalBusinessCardApp /> */}
-      {/* <AirBnbCloneApp /> */}
-      <ContactsListApp />
+      <AirBnbCloneApp />
+      {/* <ContactsListApp /> */}
     </div>
   );
 }

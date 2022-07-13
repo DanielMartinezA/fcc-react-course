@@ -1,6 +1,6 @@
 :root {
   --background-header: #FFFFFF;
-  --background-main: #FFFFFF;
+  --background: #FFFFFF;
   --text-black: #222222;
   --text-gray: #918E9B;
 }
@@ -16,7 +16,7 @@ html, body {
 }
 
 .flexWrapper {
-  background: var(--background-main);
+  background: var(--background);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
