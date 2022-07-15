@@ -15,7 +15,7 @@ export default function AirBnBCloneApp() {
     />
   });
   return (
-    <div class={styles.flexWrapper}>
+    <div className={styles.flexWrapper}>
       <NavbarComponent />
       <HeroComponent />
       <section className={styles.cardsList}>

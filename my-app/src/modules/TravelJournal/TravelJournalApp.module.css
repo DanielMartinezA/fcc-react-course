@@ -1,0 +1,128 @@
+:root {
+  --background-header: #F55A5A;
+  --background: #FFFFFF;
+  --text-black: #2B283A;
+  --text-gray: #918E9B;
+  --line-gray: #F5F5F5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+}
+
+.flexWrapper {
+  background: var(--background);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 100vh;
+}
+
+.textGray {
+  color: var(--text-gray);
+}
+
+.boldText {
+  font-weight: 600;
+}
+
+.navbar {
+  background: var(--background-header);
+  padding: 40px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 55px;
+}
+
+.navbar .logo {
+  max-width: 50px;
+}
+
+.navbar h1 {
+  color: white;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: -0.075em;
+}
+
+.cardsList {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 20px 40px;
+  /* flex-wrap: nowrap;
+  gap: 20px;
+  overflow-x: auto; */
+}
+
+.card {
+  padding: 20px 0;
+  /* flex: 0 0 auto; */
+  display: flex;
+}
+
+.cardBorder {
+  border-bottom: 2px solid var(--line-gray);
+}
+
+.card .cardImage {
+  width: 125px;
+  height: 170px;
+  object-fit: cover; /*this crops and scales the image at the same time*/
+  border-radius: 5px;
+}
+
+.card .cardInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20px;
+}
+
+.card .location {
+  margin: 0 5px;
+  color: var(--text-black);
+  font-weight: 400;
+  font-size: 10.24px;
+  line-height: 12px;
+  letter-spacing: 0.17em;
+
+}
+
+.card .mapLink {
+  margin-left: 5px;
+  color: var(--text-gray);
+  font-weight: 400;
+  font-size: 10.24px;
+  line-height: 12px;
+  text-decoration-line: underline;
+}
+
+.card .title {
+  margin: 5px 0 15px 0;
+
+  color: var(--text-black);
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+.card .period {
+  color: var(--text-black);
+  font-weight: 700;
+  font-size: 10.24px;
+  line-height: 12px;
+}
+
+.card .description {
+  color: var(--text-black);
+  font-weight: 400;
+  font-size: 10.24px;
+  line-height: 15px;
+}
