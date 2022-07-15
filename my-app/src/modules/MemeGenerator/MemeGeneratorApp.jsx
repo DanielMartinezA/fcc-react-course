@@ -1,8 +1,8 @@
-import styles from './ReactFactsApp.module.css';
-import NavbarComponent from './components/NavbarComponent'
+import styles from './MemeGeneratorApp.module.css';
+import NavbarComponent from './components/NavbarComponent/NavbarComponent'
 import MainComponent from './components/MainComponent'
 
-export default function ReactFactsApp() {
+export default function MemeGeneratorApp() {
   return (
     <div className={styles.flexWrapper}>
       <NavbarComponent />

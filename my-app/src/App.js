@@ -2,7 +2,10 @@
 // import DigitalBusinessCardApp from './modules/DigitalBusinessCard/DigitalBusinessCardApp';
 // import AirBnbCloneApp from './modules/AirBnbClone/AirBnbCloneApp';
 // import ContactsListApp from './modules/ContactsList/ContactsListApp';
-import TravelJournalApp from './modules/TravelJournal/TravelJournalApp';
+// import TravelJournalApp from './modules/TravelJournal/TravelJournalApp';
+import MemeGeneratorApp from './modules/MemeGenerator/MemeGeneratorApp';
+
+// IMPORTANT! Only import the App currently in use, otherwise it produces styling errors.
 
 export default function App() {
   return (
@@ -11,7 +14,8 @@ export default function App() {
       {/* <DigitalBusinessCardApp /> */}
       {/* <AirBnbCloneApp /> */}
       {/* <ContactsListApp /> */}
-      <TravelJournalApp />
+      {/* <TravelJournalApp /> */}
+      <MemeGeneratorApp />
     </div>
   );
 }
