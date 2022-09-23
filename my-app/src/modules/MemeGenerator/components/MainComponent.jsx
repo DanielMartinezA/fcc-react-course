@@ -1,5 +1,5 @@
 import styles from '../MemeGeneratorApp.module.css';
-import meme from '../assets/meme-img.png'
+import memeImage from '../assets/meme-img.png'
 import memesData from '../assets/memesData'
 import {useState} from 'react';
 
@@ -10,11 +10,21 @@ function getRandomInt(min, max) {
 }
 
 export default function MainComponent() {
-  const [imgUrl, setImgUrl] = useState(memesData.data.memes[0].url);
+  const [allMemeImages, setAllMemeImages] = useState(memesData);
+  const [meme, setMeme] = useState({
+    topText: "",
+    bottomText: "",
+    randomImage: memesData.data.memes[30].url
+  });
 
   function getMemeImage() {
-    const index = getRandomInt(0, memesData.data.memes.length);
-    setImgUrl(memesData.data.memes[index].url);
+    const index = getRandomInt(0, allMemeImages.data.memes.length);
+    setMeme(previousMeme => {
+      return {
+        ...previousMeme,
+        randomImage: allMemeImages.data.memes[index].url
+      }
+    });
   }
 
   return (
@@ -34,7 +44,7 @@ export default function MainComponent() {
       </form>
       <div className={styles.upperMemeText}></div>
       <div className={styles.lowerMemeText}></div>
-      <img className={styles.memeImg} src={imgUrl === "" ? meme : imgUrl} alt="Random Meme" />
+      <img className={styles.memeImg} src={meme.randomImage === "" ? memeImage : meme.randomImage} alt="Random Meme" />
     </main>
   )
 }

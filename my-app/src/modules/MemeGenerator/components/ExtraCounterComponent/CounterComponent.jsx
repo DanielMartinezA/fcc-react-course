@@ -1,6 +1,8 @@
 import styles from './CounterComponent.module.css';
 import {useState} from 'react';
 
+import CountComponent from './CountComponent';
+
 export default function CounterComponent() {
   const [count, setCount] = useState(0);
 
@@ -23,9 +25,13 @@ export default function CounterComponent() {
     <div className={styles.mainContent}>
       <div className={styles.counter}>
         <button onClick={decreaseCount} className={styles.counterMinus}>-</button>
-        <div className={styles.counterCount}>
+        {/* Creating a Count component is a very convoluted way of doing things, it's just for learning */}
+        <CountComponent
+          number={count}
+        />
+        {/* <div className={styles.counterCount}>
           <h1>{count}</h1>
-        </div>
+        </div> */}
         <button onClick={raiseCount} type='button' className={styles.counterPlus}>+</button>
       </div>
     </div>
