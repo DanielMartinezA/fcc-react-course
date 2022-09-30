@@ -5,7 +5,8 @@
 // import TravelJournalApp from './modules/TravelJournal/TravelJournalApp';
 // import MemeGeneratorApp from './modules/MemeGenerator/MemeGeneratorApp';
 // import BoxesApp from './modules/BoxesChallenge/BoxesApp';
-import JokeListApp from "./modules/JokeList/JokeListApp";
+// import JokeListApp from "./modules/JokeList/JokeListApp";
+import FormApp from "./modules/FormsChallenge/FormApp";
 
 
 // IMPORTANT! Only import the App currently in use, otherwise it produces styling errors.
@@ -20,7 +21,8 @@ export default function App() {
       {/* <TravelJournalApp /> */}
       {/* <MemeGeneratorApp /> */}
       {/* <BoxesApp /> */}
-      <JokeListApp />
+      {/* <JokeListApp /> */}
+      <FormApp />
     </div>
   );
 }
