@@ -1,9 +1,12 @@
 :root {
-  --background-main: #663399;
+  --background-main: #639;
 }
 
-html, body {
+body {
   margin: 0;
+  background-color: var(--background-main);
+  height: 100vh;
+  font-family: 'Inter', sans-serif;
 }
 
 .flexWrapper {
