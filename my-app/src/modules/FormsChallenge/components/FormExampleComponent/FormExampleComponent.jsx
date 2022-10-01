@@ -29,7 +29,7 @@ export default function FormExampleComponent() {
   }
 
   return (
-    <div>
+    <div className={styles.formContainer}>
       <form onSubmit={handleSubmit} className={styles.form}>
           <input
               type="text"

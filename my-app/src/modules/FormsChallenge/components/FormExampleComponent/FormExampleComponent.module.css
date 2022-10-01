@@ -2,13 +2,16 @@
   box-sizing: border-box;
 }
 
+.formContainer {
+  
+}
+
 .form {
-  margin: 10px;
-  padding: 20px;
+  margin: 20px;
+  padding: 50px;
   background: white;
-  border: 1px solid white;
   border-radius: 10px;
-  box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.25);
+  box-shadow: 5px 5px 15px -1px rgba(0,0,0,0.75);
 }
 
 .form > input[type="text"], .form > input[type="email"] {
