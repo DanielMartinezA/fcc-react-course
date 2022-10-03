@@ -19,20 +19,42 @@ export default function MainComponent() {
 
   function getMemeImage() {
     const index = getRandomInt(0, allMemeImages.data.memes.length);
-    setMeme(previousMeme => {
+    setMeme(prevMeme => {
       return {
-        ...previousMeme,
+        ...prevMeme,
         randomImage: allMemeImages.data.memes[index].url
       }
     });
+  }
+
+  function handleChange(event) {
+    const {name, value} = event.target
+    setMeme(prevMeme => {
+      return {
+        ...prevMeme,
+        [name]: value
+      }
+    })
   }
 
   return (
     <main className={styles.mainContent}>
       <form action="">
         <div className={styles.inputFields}>
-          <input type="text" value={"Shut up"}/>
-          <input type="text" value={"and take my money"}/>
+          <input
+            type="text"
+            name="topText"
+            placeholder="Top text"
+            onChange={handleChange}
+            value={meme.topText}
+          />
+          <input
+            type="text"
+            name="bottomText"
+            placeholder="Bottom text"
+            onChange={handleChange}
+            value={meme.bottomText}
+          />
         </div>
         <button
           type='button'
@@ -42,9 +64,11 @@ export default function MainComponent() {
           Get a new meme image 🖼
         </button>
       </form>
-      <div className={styles.upperMemeText}></div>
-      <div className={styles.lowerMemeText}></div>
-      <img className={styles.memeImg} src={meme.randomImage === "" ? memeImage : meme.randomImage} alt="Random Meme" />
+      <div className={styles.meme}>
+        <img className={styles.memeImg} src={meme.randomImage === "" ? memeImage : meme.randomImage} alt="Random Meme" />
+        <h2 className={`${styles.memeText} ${styles.topMemeText}`}>{meme.topText}</h2>
+        <h2 className={`${styles.memeText} ${styles.bottomMemeText}`}>{meme.bottomText}</h2>
+      </div>
     </main>
   )
 }

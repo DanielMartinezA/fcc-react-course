@@ -37,12 +37,12 @@ html, body {
   height: 35px;
   border-radius: 5px;
   border: 1px solid var(--border-gray);
-
+  
   color: var(--text-black);
   font-family: 'Karla';
   font-style: normal;
   font-weight: 400;
-  font-size: 12px;
+  font-size: medium;
   line-height: 14px;
   text-indent: 10px;
 }
@@ -79,15 +79,45 @@ html, body {
   transform: scale(0.99);
 }
 
+.mainContent .meme {
+  position: relative;
+}
+
 .mainContent .memeImg {
   margin-top: 15px;
-  width: 100%;
+  max-width: 100%;
+  border-radius: 3px;
 }
 
-.mainContent .upperMemeText {
-
+.mainContent .memeText {
+  position: absolute;
+  width: 80%;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 15px 0;
+  padding: 0 5px;
+  font-family: impact, sans-serif;
+  font-size: 2em;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1px;
+  text-shadow:
+    2px 2px 0 #000,
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    0 2px 0 #000,
+    2px 0 0 #000,
+    0 -2px 0 #000,
+    -2px 0 0 #000,
+    2px 2px 5px #000;
 }
 
-.mainContent .lowerMemeText {
+.mainContent .topMemeText {
+  top: 10px;
+}
 
+.mainContent .bottomMemeText {
+  bottom: 0;
 }
