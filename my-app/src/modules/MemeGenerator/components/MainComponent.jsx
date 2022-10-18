@@ -1,7 +1,7 @@
 import styles from '../MemeGeneratorApp.module.css';
-import memeImage from '../assets/meme-img.png'
-import memesData from '../assets/memesData'
-import {useState} from 'react';
+import memeImage from '../assets/meme-img1.jpg'
+// import memesData from '../assets/memesData' // maybe use it as a fallback in case the fetch fails?
+import {useState, useEffect} from 'react';
 
 function getRandomInt(min, max) {
   min = Math.ceil(min);
@@ -10,19 +10,41 @@ function getRandomInt(min, max) {
 }
 
 export default function MainComponent() {
-  const [allMemeImages, setAllMemeImages] = useState(memesData);
+  const [allMemes, setAllMemes] = useState([]);
+  
+  useEffect(() => {
+    // fetch meme data from api
+    fetch("https://api.imgflip.com/get_memes")
+      .then((res) => res.json())
+      .then(data => setAllMemes(data.data.memes))
+  }, [])
+
+  // Since the function passed in to useEffect uses it's return as a cleanup function, you can't define it as an async,
+  // as that returns a promise. To use async and await, you can define an async function within the body of the one passed in to useEffect
+  // to handle the required operations and then call it. Thus, you can still use a return that works as a cleanup function.
+  
+  // useEffect(() => {
+  //   async function getMemes() {
+  //     const res = await fetch("https://api.imgflip.com/get_memes")
+  //     const data = await res.json()
+  //     setAllMemes(data.data.memes)
+  //   }
+  //   getMemes()
+  //   // optional return of cleanup function
+  // }, [])
+
   const [meme, setMeme] = useState({
     topText: "",
     bottomText: "",
-    randomImage: memesData.data.memes[30].url
+    randomImage: memeImage
   });
 
   function getMemeImage() {
-    const index = getRandomInt(0, allMemeImages.data.memes.length);
+    const index = getRandomInt(0, allMemes.length);
     setMeme(prevMeme => {
       return {
         ...prevMeme,
-        randomImage: allMemeImages.data.memes[index].url
+        randomImage: allMemes[index].url
       }
     });
   }

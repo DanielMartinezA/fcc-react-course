@@ -81,6 +81,8 @@ html, body {
 
 .mainContent .meme {
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 .mainContent .memeImg {
