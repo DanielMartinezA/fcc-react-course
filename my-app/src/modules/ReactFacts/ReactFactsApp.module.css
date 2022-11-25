@@ -1,7 +1,11 @@
 :root {
   --background-header: #21222A;
-  --background-main: #282D35;
+  --background-main-light: white;
+  --background-main-dark: #282D35;
   --background-logo: #33373E;
+  --background-slider-light: #2B283A;
+  --background-slider-dark: #F5F5F5;
+  --main-font-color-light: #2B283A;
   --react-blue: #61DAFB;
   --react-white: #DEEBF8;
 }
@@ -10,24 +14,35 @@
   box-sizing: border-box;
 }
 
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
 html, body {
   margin: 0;
   font-family: 'Inter', sans-serif;
 }
 
 .flexWrapper {
-  background: var(--background-main);
+  /* background: var(--background-main); */
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  /* justify-content: flex-start; */
   min-height: 100vh;
 }
 
 .navbar {
-  background: var(--background-header);
-  padding: 0px 10px;
   display: flex;
   align-items: center;
+  background-color: white;
+  padding: 0px 10px;
+  height: 60px;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  z-index: 1;
+}
+
+.navbarDark {
+  background-color: var(--background-header);
 }
 
 .logo {
@@ -49,34 +64,108 @@ html, body {
   font-weight: 600;
 }
 
-.mainContent {
-  background: var(--background-main);
-  padding: 10px;
-  /* The example uses a half-logo as a background image */
-  /* background-image: url(./assets/background-logo.png);
-  background-repeat: no-repeat;
-  background-position: 130% center; */
+.navbar .toggler {
+  display: flex;
+  align-items: center;
 }
 
-.mainContent > h1 {
-  color: white;
+.navbar .toggler p {
+  font-size: 0.625rem;
+  font-weight: 600;
+}
+
+.navbar .togglerSlider {
+  width: 25px;
+  height: 13px;
+  background-color: var(--background-slider-light);
+  border-radius: 2rem;
+  margin-inline: 7px;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid black;
+  box-sizing: content-box;
+}
+
+.navbarDark .togglerSlider {
+  border-color: white;
+  background-color: var(--background-slider-dark);
+}
+
+.navbar .togglerSliderCircle {
+  height: 13px;
+  width: 13px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.navbarDark .togglerSliderCircle {
+  background-color: black;
+}
+
+.navbar .togglerLight {
+  color: #2B283A;
+}
+
+.navbarDark .togglerLight {
+  color: #918E9B;
+}
+
+.navbar .togglerDark {
+  color: #D5D4D8;
+}
+
+.navbarDark  .togglerDark {
+  color: #FFFFFF;
+}
+
+.navbarDark .togglerSlider {
+  justify-content: flex-end;
+}
+
+.mainContent {
+  background-color: var(--background-main-light);
+  padding: 57px 27px;
+  background-image: url(./assets/react-icon-light.png);
+  /* The example uses a half-logo as a background image */
+  background-repeat: no-repeat;
+  background-position: right center;
+  flex: 1 1 auto;
+  color: var(--main-font-color-light);
+  max-height: 400px;
+}
+
+.mainContentDark {
+  background-image: url(./assets/react-icon-dark.png);
+  background-color: var(--background-main-dark);
+  color: var(--background-main-light);
+}
+
+.mainContent > .mainTitle {
+  margin: 0;
   font-size: 39px;
   font-weight: 700;
   letter-spacing: -0.05em;
 }
 
-.mainContent > ul > li{
-  /* color: var(--react-blue); */
-  padding: 10px 0;
+.mainContent > .mainFacts {
+  margin-top: 46px;
+  max-width: 400px;
 }
 
-.mainContent > ul > li::marker{
+.mainContent > .mainFacts > li{
+  line-height: 19px;
+  padding-block: 10px;
+}
+
+.mainContent > .mainFacts > li::marker{
   color: var(--react-blue);
   font-size: 1.4rem;
 }
 
-.mainContent > ul > li > span {
-  color: white;
+.mainContent > .mainFacts > li > span {
+  /* color: white; */
   font-size: 16px;
   font-weight: 400;
 }

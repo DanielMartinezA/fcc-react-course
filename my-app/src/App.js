@@ -1,9 +1,9 @@
-// import ReactFactsApp from './modules/ReactFacts/ReactFactsApp';
+import ReactFactsApp from './modules/ReactFacts/ReactFactsApp';
 // import DigitalBusinessCardApp from './modules/DigitalBusinessCard/DigitalBusinessCardApp';
 // import AirBnbCloneApp from './modules/AirBnbClone/AirBnbCloneApp';
 // import ContactsListApp from './modules/ContactsList/ContactsListApp';
 // import TravelJournalApp from './modules/TravelJournal/TravelJournalApp';
-import MemeGeneratorApp from './modules/MemeGenerator/MemeGeneratorApp';
+// import MemeGeneratorApp from './modules/MemeGenerator/MemeGeneratorApp';
 // import BoxesApp from './modules/BoxesChallenge/BoxesApp';
 // import JokeListApp from "./modules/JokeList/JokeListApp";
 // import FormApp from "./modules/FormsChallenge/FormApp";
@@ -14,12 +14,12 @@ import MemeGeneratorApp from './modules/MemeGenerator/MemeGeneratorApp';
 export default function App() {
   return (
     <div>
-      {/* <ReactFactsApp /> */}
+      <ReactFactsApp />
       {/* <DigitalBusinessCardApp /> */}
       {/* <AirBnbCloneApp /> */}
       {/* <ContactsListApp /> */}
       {/* <TravelJournalApp /> */}
-      <MemeGeneratorApp />
+      {/* <MemeGeneratorApp /> */}
       {/* <BoxesApp /> */}
       {/* <JokeListApp /> */}
       {/* <FormApp /> */}
