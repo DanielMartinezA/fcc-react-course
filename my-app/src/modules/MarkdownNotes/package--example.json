@@ -1,0 +1,22 @@
+{
+  "name": "project",
+  "dependencies": {
+    "react": "17.0.2 - check",
+    "react-dom": "17.0.2 - check",
+    "react-mde": "11.5.0 - missing",
+    "showdown": "1.9.1 - missing",
+    "react-split": "2.0.13 - missing",
+    "nanoid": "3.1.28 - missing"
+  },
+  "devDependencies - all missing": {
+    "webpack": "^2.0",
+    "babel-core": "^6.0",
+    "babel-loader": "^7.0",
+    "babel-preset-env": "*",
+    "babel-preset-react": "*"
+  },
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack -w"
+  }
+}

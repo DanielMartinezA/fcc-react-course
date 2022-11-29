@@ -1,4 +1,4 @@
-import ReactFactsApp from './modules/ReactFacts/ReactFactsApp';
+// import ReactFactsApp from './modules/ReactFacts/ReactFactsApp';
 // import DigitalBusinessCardApp from './modules/DigitalBusinessCard/DigitalBusinessCardApp';
 // import AirBnbCloneApp from './modules/AirBnbClone/AirBnbCloneApp';
 // import ContactsListApp from './modules/ContactsList/ContactsListApp';
@@ -7,6 +7,7 @@ import ReactFactsApp from './modules/ReactFacts/ReactFactsApp';
 // import BoxesApp from './modules/BoxesChallenge/BoxesApp';
 // import JokeListApp from "./modules/JokeList/JokeListApp";
 // import FormApp from "./modules/FormsChallenge/FormApp";
+import MarkdownNotesApp from "./modules/MarkdownNotes/MarkdownNotesApp"
 
 
 // IMPORTANT! Only import the App currently in use, otherwise it produces styling errors.
@@ -14,7 +15,7 @@ import ReactFactsApp from './modules/ReactFacts/ReactFactsApp';
 export default function App() {
   return (
     <div>
-      <ReactFactsApp />
+      {/* <ReactFactsApp /> */}
       {/* <DigitalBusinessCardApp /> */}
       {/* <AirBnbCloneApp /> */}
       {/* <ContactsListApp /> */}
@@ -23,6 +24,7 @@ export default function App() {
       {/* <BoxesApp /> */}
       {/* <JokeListApp /> */}
       {/* <FormApp /> */}
+      <MarkdownNotesApp />
     </div>
   );
 }
