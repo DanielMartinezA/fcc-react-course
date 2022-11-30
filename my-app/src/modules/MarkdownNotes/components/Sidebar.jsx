@@ -16,6 +16,12 @@ export default function Sidebar(props) {
                     <h4 className={styles.textSnippet}>{
                         newLineIndex === -1 ? note.body : note.body.slice(0, newLineIndex)
                     }</h4>
+                    <button
+                        className={styles.deleteBtn}
+                        onClick={(event) => props.deleteNote(event, note.id)}
+                    >
+                        <i className={`${styles.ggTrash} ${styles.trashIcon}`}></i>
+                    </button>
                 </div>
             </div>
     )})
