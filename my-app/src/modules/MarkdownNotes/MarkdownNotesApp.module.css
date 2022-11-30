@@ -28,9 +28,9 @@ button:focus {
     height: 100vh;
 }
 
-.sidebarNote {
-    /* display: flex; */
-}
+/* .sidebarNote {
+    display: flex;
+} */
 
 .sidebarHeader {
     display: flex;
