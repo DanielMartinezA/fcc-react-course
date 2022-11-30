@@ -3,23 +3,23 @@ import Editor from "./components/Editor"
 import data from "./assets/data"
 import Split from "react-split"
 import {nanoid} from "nanoid"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import styles from './MarkdownNotesApp.module.css';
 
-/**
- * Challenge: Spend 10-20+ minutes reading through the code
- * and trying to understand how it's currently working. Spend
- * as much time as you need to feel confident that you 
- * understand the existing code (although you don't need
- * to fully understand everything to move on)
- */
-
 export default function MarkdownNotesApp() {
-    const [notes, setNotes] = useState([])
+    const notesLocalStorageKey = "notesLS"
+
+    const [notes, setNotes] = useState(
+        () => { return JSON.parse(localStorage.getItem(notesLocalStorageKey)) || [] }
+    )
     const [currentNoteId, setCurrentNoteId] = useState(
         (notes[0] && notes[0].id) || ""
     )
     
+    useEffect(() => {
+        localStorage.setItem(notesLocalStorageKey, JSON.stringify(notes))
+    }, [notes])
+
     function createNewNote() {
         const newNote = {
             id: nanoid(),
