@@ -10,6 +10,7 @@ export default function MarkdownNotesApp() {
     const notesLocalStorageKey = "notesLS"
 
     const [notes, setNotes] = useState(
+        // Passing the initial value logic as a function ensures it's run only once
         () => { return JSON.parse(localStorage.getItem(notesLocalStorageKey)) || [] }
     )
     const [currentNoteId, setCurrentNoteId] = useState(
