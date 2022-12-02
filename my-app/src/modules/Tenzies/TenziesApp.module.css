@@ -1,3 +1,113 @@
 * {
   box-sizing: border-box;
 }
+
+:root {
+  --background-blue: #0B2434;
+  --background-white: #F5F5F5;
+  --background-green: #59E391;
+  --die-text: #2B283A;
+  --main-text-paragraph: #4A4E74;
+  --main-text-title: #2B283A;
+  --button-color: #5035FF;
+}
+
+body {
+  margin: 0;
+  background: var(--background-blue);
+  padding: 30px 20px;
+}
+
+.mainSection {
+  background: var(--background-white);
+  height: 320px;
+  max-width: 800px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.mainSection > h1 {
+  /* margin: 30px 0 0 0; */
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  text-align: center;
+  letter-spacing: -0.03em;
+  color: var(--main-text-title);
+}
+
+.mainSection > p {
+  width: 230px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: -0.03em;
+  color: var(--main-text-paragraph);
+}
+
+.diceContainer {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 20px 20px
+}
+
+.die {
+  height: 36px;
+  width: 36px;
+  background: white;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.dieIsHeld {
+  background: var(--background-green);
+}
+
+.dieValue {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 24px;
+  text-align: center;
+  color: var(--die-text);
+}
+
+.rollBtn {
+  width: 92px;
+  height: 35px;
+  margin: 20px 0;
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: white;
+  background: var(--button-color);
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.18);
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.rollBtn:focus {
+  outline: none;
+}
+
+.rollBtn:active {
+  transform: scale(0.95);
+}

@@ -7,7 +7,8 @@
 // import BoxesApp from './modules/BoxesChallenge/BoxesApp';
 // import JokeListApp from "./modules/JokeList/JokeListApp";
 // import FormApp from "./modules/FormsChallenge/FormApp";
-import MarkdownNotesApp from "./modules/MarkdownNotes/MarkdownNotesApp"
+// import MarkdownNotesApp from "./modules/MarkdownNotes/MarkdownNotesApp"
+import TenziesApp from "./modules/Tenzies/TenziesApp";
 
 
 // IMPORTANT! Only import the App currently in use, otherwise it produces styling errors.
@@ -24,7 +25,8 @@ export default function App() {
       {/* <BoxesApp /> */}
       {/* <JokeListApp /> */}
       {/* <FormApp /> */}
-      <MarkdownNotesApp />
+      {/* <MarkdownNotesApp /> */}
+      <TenziesApp />
     </div>
   );
 }
