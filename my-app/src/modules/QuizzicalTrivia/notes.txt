@@ -1,0 +1,14 @@
+About app-screens.png
+ - The first picture is the starting screen. Like an overlay.
+ - The second picture displays the screen after you click the "Start quiz" button on the first one.
+   The lesson says you could condionally render it after the button press.
+   (Not a redirect? Maybe it's a webapp thing?)
+ - The third picture is actually the same screen as the second one, except it's showing the player
+   feedback one the quiz answers.
+
+Requirements:
+ - Two screens: Start and Questions
+ - The app must pull 5 questions from the OTDB API (Open Trivia Database API)
+   https://opentdb.com/api_config.php
+ - After clicking the Check answers button, tally the correct answers and display them as seen in the third picture.
+ - Make sure the app is styled and polished. As a personal requirement, use a mobile first design.
