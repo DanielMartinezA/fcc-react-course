@@ -1,0 +1,9 @@
+FreeCodeCamp:
+React Course - Beginner's Tutorial for React JavaScript Library [2022]
+https://www.youtube.com/watch?v=bMknfKXIFA8
+
+There are slides with links available here: (you need to login to unlock it)
+https://scrimba.com/learn/learnreact#
+
+Some of the links take you to figma documents of the pages the course makes you create.
+
