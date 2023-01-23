@@ -1,0 +1,180 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --background-white: #F5F7Fb;
+  --background-blue: #4D5B9E;
+  --background-light-yellow: #FFFAD1;
+  --background-light-blue: #DEEBF8;
+  --button-light-blue: #D6DBF5;
+  --button-light-green: #94D7A2;
+  --button-light-red: #F8BCBC;
+  --text-blue: #293264;
+  --text-white: #F5F7FB;
+  --line-break-color: #DBDEF0; 
+}
+
+.flexWrapper {
+  background: var(--background-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 100vh;
+}
+
+.homeComponent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.homeComponent .title {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 31.25px;
+  line-height: 37px;
+  text-align: center;
+  color: var(--text-blue);
+}
+
+.homeComponent .description {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: var(--text-blue);
+}
+
+.homeComponent .startButton {
+  width: 193px;
+  height: 52px;
+  background: var(--background-blue);
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: var(--text-white);
+}
+
+.cleanButton:focus {
+  outline: none;
+}
+
+.cleanButton:active {
+  transform: scale(0.95);
+}
+
+.quizComponent {
+  margin-left: 20px;
+  max-width: 150vh;
+}
+
+.quizComponent .quizBottom {
+  margin-top: 20px;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+.quizComponent .quizResults {
+  width: 262px;
+  height: 15px;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 15px;
+  text-align: center;
+
+  color: var(--text-blue);
+}
+
+.quizComponent .checkButton {
+  width: 120px;
+  height: 35px;
+  background: var(--background-blue);
+  border-radius: 10px;
+  border: none;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 12px;
+  text-align: center;
+  color: var(--text-white);
+}
+
+.questionComponent {
+  border-bottom: 0.8px solid var(--line-break-color);
+}
+
+.questionComponent .questionText {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--text-blue);
+}
+
+.questionComponent .options {
+  margin-bottom: 15px;
+}
+
+.questionComponent .optionButton {
+  width: auto;
+  height: 20px;
+  margin-right: 13px;
+  min-width: 65px;
+  padding: 0px 8px;
+  background: var(--background-white);
+  border-radius: 8px;
+  border: 0.8px solid var(--background-blue);
+  cursor: pointer;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10.24px;
+  line-height: 12px;
+  text-align: center;
+  color: var(--text-blue);
+}
+
+.questionComponent .optionButtonSelected {
+  background: var(--button-light-blue);
+  border-radius: 8px;
+  border: none;
+}
+
+.questionComponent .optionButtonRightAnswer {
+  background: var(--button-light-green);
+}
+
+.questionComponent .optionButtonWrongAnswer {
+  background: var(--button-light-red);
+}
+
+.questionComponent .optionButtonFaded {
+  opacity: 0.5;
+}
